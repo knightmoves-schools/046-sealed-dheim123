@@ -1,17 +1,23 @@
-﻿namespace knightmoves;
+namespace knightmoves;
 
-public class Organization{
+public sealed class Organization
+{
    private string Name;
    private int YearEstablished = 1934;
 
-   public Organization(string name){
+   public Organization(string name)
+   {
       Name = name;
    }
 
-   public string LookUpBranding(bool includeYearEstablished){
-      if (includeYearEstablished){
+   public string LookUpBranding(bool includeYearEstablished)
+   {
+      if (includeYearEstablished)
+      {
          return $"{Name} est. {YearEstablished}";
-      } else {
+      }
+      else
+      {
          return Name;
       }
    }
